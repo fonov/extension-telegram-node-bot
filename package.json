@@ -1,0 +1,25 @@
+{
+  "name": "extension-telegram-node-bot",
+  "version": "1.0.0",
+  "description": "extension-telegram-node-bot base on telegram-node-bot",
+  "main": "./lib/extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mounlion@github.com/mounlion/extension-telegram-node-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "node",
+    "bot",
+    "extension"
+  ],
+  "author": "Sergei Fonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mounlion/extension-telegram-node-bot/issues"
+  },
+  "homepage": "https://github.com/mounlion/extension-telegram-node-bot#readme"
+}
