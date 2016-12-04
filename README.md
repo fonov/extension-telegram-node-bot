@@ -21,11 +21,20 @@ If you don’t, you can access these files on [unpkg](https://unpkg.com/extensio
 ```js
 const BotExtension = require('extension-telegram-node-bot')
 ```
+Request telegram-node-bot in global variable
+```js
+global.Telegram = require('telegram-node-bot')
+```
+Add extension
+```js
+tg.addScopeExtension(BotExtension.runCustomForm)
+```
+
 
 ## runForm
 
 ```js
-new BotExtension($).runForm({
+$.runCustomForm($, {
     config: {
         title: 'Registration new user', // Title Form
         button: { // Special button
