@@ -28,6 +28,7 @@ global.Telegram = require('telegram-node-bot')
 Add extension
 ```js
 tg.addScopeExtension(BotExtension.runCustomForm)
+tg.addScopeExtension(BotExtension.runCustomInlineMenu)
 ```
 
 
