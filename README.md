@@ -31,7 +31,7 @@ tg.addScopeExtension(BotExtension.runCustomForm)
 ```
 
 
-## runForm
+## runCustomForm
 
 ```js
 $.runCustomForm($, {
@@ -100,5 +100,127 @@ $.runCustomForm($, {
 })
 ```
 
-
+## runCustomInlineMenu
+**Single Menu**
+```js
+$.runCustomInlineMenu({
+    title: 'My Cars',
+    items: {
+        message: 'BMW x6',
+        menu: [
+            [
+                {
+                    text: 'Sell',
+                    callback: (callbackQuery, message) => {
+                        console.log('Sell')
+                    }
+                },
+                {
+                    text: 'Buy',
+                    callback: (callbackQuery, message) => {
+                        console.log('Buy')
+                    }
+                }
+            ],
+            [
+                {
+                    text: 'Contact',
+                    callback: (callbackQuery, message) => {
+                        console.log('Contact')
+                    }
+                }
+            ]
+        ]
+    }
+})
+```
+**Many menu**
+```js
+$.runCustomInlineMenu({
+    title: 'My Cars',
+    items: [{
+        message: 'BMW x6',
+        menu: [
+            [
+                {
+                    text: 'Sell',
+                    callback: (callbackQuery, message) => {
+                        console.log('Sell')
+                    }
+                },
+                {
+                    text: 'Buy',
+                    callback: (callbackQuery, message) => {
+                        console.log('Buy')
+                    }
+                }
+            ],
+            [
+                {
+                    text: 'Contact',
+                    callback: (callbackQuery, message) => {
+                        console.log('Contact')
+                    }
+                }
+            ]
+        ]
+    },
+        {
+            message: 'Mazda 6',
+            menu: [
+                [
+                    {
+                        text: 'Sell',
+                        callback: (callbackQuery, message) => {
+                            console.log('Sell')
+                        }
+                    },
+                    {
+                        text: 'Buy',
+                        callback: (callbackQuery, message) => {
+                            console.log('Buy')
+                        }
+                    }
+                ],
+                [
+                    {
+                        text: 'Contact',
+                        callback: (callbackQuery, message) => {
+                            console.log('Contact')
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            message: 'Audi a6',
+            menu: [
+                [
+                    {
+                        text: 'Sell',
+                        callback: (callbackQuery, message) => {
+                            console.log('Sell')
+                        }
+                    },
+                    {
+                        text: 'Buy',
+                        callback: (callbackQuery, message) => {
+                            console.log('Buy')
+                        }
+                    }
+                ],
+                [
+                    {
+                        text: 'Contact',
+                        callback: (callbackQuery, message) => {
+                            console.log('Contact')
+                        }
+                    }
+                ]
+            ]
+        }
+    ]
+})
+```
+![](./lib/many-menu.gif "Many menu")
 ### Fonov Sergei 2016
