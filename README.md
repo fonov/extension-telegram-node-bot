@@ -2,13 +2,13 @@
 base on <a href="https://github.com/Naltox/telegram-node-bot">telegram-node-bot</a>
 # Feature
 + Powerful Form
--Button: back, cancel, confirm
--Select multiple script for form
--Confirm (yes/no) for form
--Example: you ask user, would you like write comment? if user choose yes - add comment form else skip
+<br>Button: back, cancel, confirm
+<br>Select multiple script for form
+<br>Confirm (yes/no) for form
+<br>Example: you ask user, would you like write comment? if user choose yes - add comment form else skip
 + New InlineMenu
--Single InlineMenu
--Many InlineMenu
+<br>Single InlineMenu
+<br>Many InlineMenu
 
 ## Installation
 
