@@ -202,34 +202,25 @@ Full code
 $.runCustomForm({
     config: {
         title: 'Order Pizza', // Title Form
-        button: { // Special button
-            confirm: 'confirm',
-            back: 'Back',
-            cancel: 'Cancel'
-        },
-        message: { // Message on events
-            confirm: (result) => {
+        confirm: {
+            text: 'confirm',
+            message: (result) => {
                 return `You name is ${result.name}`
                     +`\nPizza is ${result.pizza}`
                     +`\nSize is ${result.size}`
                     +`\nLocation \u2714`
                     +`\nComment${result.addcomment ? `: ${result.comment}` : ' \u2717'}`
-
             },
-            finish: (result) => {
-                return `${result.name}, you order is create`
-                    +`\nWe len know when pizza is ready to delivery`
-            }
+            resize_keyboard: true
         },
-        on: { // Event on calcel
-            cancel: ($) => {
-                $.sendMessage('You canceled order pizza', {
-                    disable_web_page_preview: true,
-                    parse_mode: 'HTML',
-                    reply_markup: JSON.stringify({
-                        remove_keyboard: true
-                    })
-                })
+        back: {
+            text: 'Back'
+        },
+        cancel: {
+            text: 'Cancel',
+            message: 'You canceled order pizza',
+            callback: ($) => {
+                console.log('cancel')
             }
         }
     },
@@ -246,7 +237,8 @@ $.runCustomForm({
                     return callback(true, message.text)
                 else callback(false)
             },
-            keyboardonly: false // If you want only keybord value, set true
+            keyboardonly: false, // If you want only keybord value, set true
+            resize_keyboard: true
         },
         pizza: {
             text: 'Type Pizza',
@@ -369,7 +361,7 @@ $.runCustomForm({
         }
     }
 }, (result) => {
-    console.log(result)
+    $.sendMessage(`${result.name}! you send form`)
 })
 ```
 
