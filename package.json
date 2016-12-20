@@ -1,6 +1,6 @@
 {
   "name": "extension-telegram-node-bot",
-  "version": "1.0.9",
+  "version": "1.1.2",
   "description": "extension-telegram-node-bot base on telegram-node-bot",
   "main": "lib/extension.js",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/mounlion/extension-telegram-node-bot#readme",
   "dependencies": {
-    "telegram-node-bot": "^4.0.4"
+    "telegram-node-bot": "^4.0.5"
   }
 }
