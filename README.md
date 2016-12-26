@@ -77,6 +77,7 @@ name: {
     text: 'You name', // Question
         question: true, // If you need symbol "?" set true
         error: 'Sorry, you name is incorrect',
+        extramess: 'Only 3 symbel', // Extra message
         keyboard: [
         [$.message.from.firstName]
     ],
